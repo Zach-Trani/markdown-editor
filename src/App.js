@@ -1,5 +1,5 @@
 import './App.css';
-import SaveChanges from './Components/SaveChanges/SaveChanges';
+import SaveChanges from './Components/SaveChanges';
 
 function App() {
   return (
