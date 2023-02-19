@@ -8,7 +8,7 @@ import styles from "./save-changes.module.scss";
  */
 function SaveChanges() {
   return (
-    <div>
+    <div className="ms-3 me-3">
       <button className={clsx("btn d-flex", styles.saveButton)} type="submit">
         <div className="me-1">
           <svg
