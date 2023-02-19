@@ -1,12 +1,12 @@
 import './App.css';
+import NavBar from './Components/NavBar';
 import SaveChanges from './Components/SaveChanges';
 
 function App() {
   return (
     <div className="App">
       <div>
-        <p className='text-primary'>test</p>
-        <SaveChanges />
+        <NavBar />
       </div>
     </div>
   );
