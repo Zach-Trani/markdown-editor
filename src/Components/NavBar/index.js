@@ -1,5 +1,11 @@
 import SaveChanges from "../SaveChanges";
 
+
+/**
+ * NavBar component renders the NavBar which includes the hamburger menu, site name, trash button, and save changes.
+ *
+ * @return {*} 
+ */
 const NavBar = () => {
     return (
         <nav className="navbar navbar-dark bg-dark">
