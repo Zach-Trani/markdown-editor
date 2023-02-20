@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReactMarkdown from 'react-markdown'
+import ReactDom from 'react-dom'
 
 const Markdown = () => {
     const [input, setInput] = useState('');
@@ -17,7 +19,7 @@ const Markdown = () => {
                     size='10'></input>
             </div>
             <div>
-                {input}
+                <ReactMarkdown children={input}></ReactMarkdown>
             </div>
         </div>
     );
