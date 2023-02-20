@@ -1,4 +1,5 @@
 import './App.css';
+import Markdown from './Components/Markdown';
 import NavBar from './Components/NavBar';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <div>
         <NavBar />
+        <Markdown />
       </div>
     </div>
   );
