@@ -29,7 +29,7 @@ const Markdown = () => {
         <textarea
           className="form-control w-100 bg-dark text-light ps-3 pt-3"
           placeholder="Enter text"
-          rows="24"
+          rows="100"
           onChange={handleChange}
         ></textarea>
       </div>
