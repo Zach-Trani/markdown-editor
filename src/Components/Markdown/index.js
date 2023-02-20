@@ -11,15 +11,14 @@ const Markdown = () => {
     };
 
     return (
-        <div>
-            <div>
+        <div className='row'>
+            <div className='col-12 col-sm-6'>
                 <label htmlFor='name'>Markdown Tab</label>
-                <input type='text' id='name' name='name' onChange={handleChange}
-                    required
-                    size='10'></input>
+                <textarea class="form-control" placeholder="Enter text" rows="10" onChange={handleChange}></textarea>
             </div>
-            <div>
+            <div className='col-12 col-sm-6'>
                 <ReactMarkdown children={input}></ReactMarkdown>
+
             </div>
         </div>
     );

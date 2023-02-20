@@ -1,4 +1,3 @@
-import './App.css';
 import Markdown from './Components/Markdown';
 import NavBar from './Components/NavBar';
 
