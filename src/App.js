@@ -1,6 +1,5 @@
 import './App.css';
 import NavBar from './Components/NavBar';
-import SaveChanges from './Components/SaveChanges';
 
 function App() {
   return (
