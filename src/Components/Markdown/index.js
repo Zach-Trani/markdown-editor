@@ -8,11 +8,12 @@ import styles from "./markdown.module.scss";
  *
  * @return {*}
  */
-const Markdown = () => {
+const Markdown = ({onData}) => {
   const [input, setInput] = useState("");
 
   const handleChange = (event) => {
     setInput(event.target.value);
+    onData(event.target.value);
   };
 
   return (
@@ -47,6 +48,7 @@ const Markdown = () => {
           className={clsx("ps-3 pt-3", styles.markdownBody)}
         ></ReactMarkdown>
       </div>
+     
     </div>
   );
 };
