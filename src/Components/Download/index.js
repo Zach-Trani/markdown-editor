@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import styles from "./downloadButton.module.scss";
+import { jsPDF } from "jspdf";
 
 /**
  * Download component is a button that is used to save the changes that a user makes to their markdown document.
@@ -9,7 +10,10 @@ import styles from "./downloadButton.module.scss";
 function Download() {
   return (
     <div className="ms-3 me-3">
-      <button className={clsx("btn d-flex", styles.downloadButton)} type="submit">
+      <button
+        className={clsx("btn d-flex", styles.downloadButton)}
+        type="submit"
+      >
         <div className="me-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
