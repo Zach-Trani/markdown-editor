@@ -27,7 +27,7 @@ const Markdown = () => {
 
   return (
     <>
-      <div className="d-flex">
+      <div className="d-flex justify-content-evenly bg-dark">
         {markDownSyntax.map((el) => {
           return (
             <AddButton
