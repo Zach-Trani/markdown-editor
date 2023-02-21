@@ -6,10 +6,9 @@ import styles from "./save-changes.module.scss";
  *
  * @return {*} 
  */
-function SaveChanges({input}) {
+function SaveChanges() {
   return (
     <div className="ms-3 me-3">
-        {console.log(input)}
       <button className={clsx("btn d-flex", styles.saveButton)} type="submit">
         <div className="me-1">
           <svg
