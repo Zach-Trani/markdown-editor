@@ -1,7 +1,10 @@
-const AddButton = ({title, content}) => {
+const AddButton = ({title, content, handleClick}) => {
+    
     return(
         <div>
-            <button>Add {title}</button>
+            <button
+            onClick={handleClick}
+            >Add {title}</button>
         </div>
     );
 };

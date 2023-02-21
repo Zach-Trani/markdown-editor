@@ -12,18 +12,24 @@ import { markDownSyntax } from "../../Data/markDownSyntax";
  */
 const Markdown = ({ onData }) => {
   const [input, setInput] = useState("");
+  const [markDownText, setMarkDownText] = useState("");
 
   const handleChange = (event) => {
     setInput(event.target.value);
     onData(event.target.value);
   };
 
+  const handleClick = (content) => {
+    setMarkDownText(content)
+    setInput(content)    
+  };
+
   return (
     <>
-      <div>
+      <div className="d-flex">
         {markDownSyntax.map((el) => {
           return (
-            <AddButton key={el.id} title={el.title} content={el.content} />
+            <AddButton key={el.id} title={el.title} content={el.content} handleClick={() => handleClick(el.content)}/>
           );
         })}
       </div>
@@ -42,6 +48,7 @@ const Markdown = ({ onData }) => {
             placeholder="Enter text"
             rows="100"
             onChange={handleChange}
+            value={markDownText}
           ></textarea>
         </div>
         <div className="col-12 col-sm-6 p-0 bg-dark text-light">
