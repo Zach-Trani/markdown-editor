@@ -15,12 +15,15 @@ const Markdown = ({ onData }) => {
   const [markDownText, setMarkDownText] = useState("");
 
   const handleChange = (event) => {
+    setMarkDownText(event.target.value)
     setInput(event.target.value);
     onData(event.target.value);
   };
 
   const handleClick = (content) => {
-    setMarkDownText(content)
+    setMarkDownText((prev) => {
+      return prev + content
+    });
     setInput(content)    
   };
 
