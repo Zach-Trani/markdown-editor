@@ -10,21 +10,17 @@ import { markDownSyntax } from "../../Data/markDownSyntax";
  *
  * @return {*}
  */
-const Markdown = ({ onData }) => {
-  const [input, setInput] = useState("");
+const Markdown = () => {
   const [markDownText, setMarkDownText] = useState("");
 
   const handleChange = (event) => {
     setMarkDownText(event.target.value)
-    setInput(event.target.value);
-    onData(event.target.value);
   };
 
   const handleClick = (content) => {
     setMarkDownText((prev) => {
       return prev + content
-    });
-    setInput(content)    
+    });  
   };
 
   return (
@@ -64,7 +60,7 @@ const Markdown = ({ onData }) => {
             PREVIEW
           </p>
           <ReactMarkdown
-            children={input}
+            children={markDownText}
             className={clsx("ps-3 pt-3", styles.markdownBody)}
           ></ReactMarkdown>
         </div>
