@@ -4,9 +4,9 @@ import styles from "./save-changes.module.scss";
 /**
  * SaveChanges component is a button that is used to save the changes that a user makes to their markdown document.
  *
- * @return {*} 
+ * @return {*}
  */
-function SaveChanges() {
+const SaveChanges = () => {
   return (
     <div className="ms-3 me-3">
       <button className={clsx("btn d-flex", styles.saveButton)} type="submit">
@@ -26,6 +26,6 @@ function SaveChanges() {
       </button>
     </div>
   );
-}
+};
 
 export default SaveChanges;

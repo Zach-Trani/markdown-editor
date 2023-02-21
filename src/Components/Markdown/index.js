@@ -13,14 +13,16 @@ import { markDownSyntax } from "../../Data/markDownSyntax";
 const Markdown = () => {
   const [markDownText, setMarkDownText] = useState("");
 
+  // Handles the change in the text area and updates the state.
   const handleChange = (event) => {
-    setMarkDownText(event.target.value)
+    setMarkDownText(event.target.value);
   };
 
+  // Handles the click of the add button and adds the markdown syntax to the text area.
   const handleClick = (content) => {
     setMarkDownText((prev) => {
-      return prev + content
-    });  
+      return prev + content;
+    });
   };
 
   return (
@@ -28,7 +30,12 @@ const Markdown = () => {
       <div className="d-flex">
         {markDownSyntax.map((el) => {
           return (
-            <AddButton key={el.id} title={el.title} content={el.content} handleClick={() => handleClick(el.content)}/>
+            <AddButton
+              key={el.id}
+              title={el.title}
+              content={el.content}
+              handleClick={() => handleClick(el.content)}
+            />
           );
         })}
       </div>
