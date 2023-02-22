@@ -33,7 +33,6 @@ const Markdown = () => {
             <AddButton
               key={el.id}
               title={el.title}
-              content={el.content}
               handleClick={() => handleClick(el.content)}
             />
           );

@@ -1,7 +1,7 @@
 import SaveChanges from "../SaveChanges";
 
 /**
- * NavBar component renders the NavBar which includes the hamburger menu, site name, trash button, and save changes.
+ * NavBar component renders the nav bar including the hamburger menu, site name, trash button, and save changes.
  *
  * @return {*}
  */
