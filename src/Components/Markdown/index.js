@@ -5,7 +5,6 @@ import styles from "./markdown.module.scss";
 import AddButton from "../AddButton";
 import { markDownSyntax } from "../../Data/markDownSyntax";
 import NavBar from "../NavBar";
-import { defaultState } from "../../Data/defaultState";
 
 /**
  * Markdown component renders the side by side editor and preview windows allowing users to enter input and have it display to the DOM.
@@ -13,7 +12,7 @@ import { defaultState } from "../../Data/defaultState";
  * @return {*}
  */
 const Markdown = () => {
-  const [markDownText, setMarkDownText] = useState(localStorage.getItem("markDownText") || defaultState);
+  const [markDownText, setMarkDownText] = useState(localStorage.getItem("markDownText") || "");
 
 
   useEffect(() => {
