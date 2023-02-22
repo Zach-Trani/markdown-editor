@@ -4,6 +4,7 @@ import clsx from "clsx";
 import styles from "./markdown.module.scss";
 import AddButton from "../AddButton";
 import { markDownSyntax } from "../../Data/markDownSyntax";
+import NavBar from "../NavBar";
 
 /**
  * Markdown component renders the side by side editor and preview windows allowing users to enter input and have it display to the DOM.
@@ -27,7 +28,8 @@ const Markdown = () => {
 
   return (
     <>
-      <div className="d-flex">
+    <NavBar/>
+      <div className="d-flex flex-wrap justify-content-lg-evenly bg-dark">
         {markDownSyntax.map((el) => {
           return (
             <AddButton
@@ -42,14 +44,14 @@ const Markdown = () => {
         <div className="col-12 col-sm-6 p-0">
           <p
             className={clsx(
-              "ps-3 m-0 d-flex align-items-center",
+              "ps-3 ps-4 m-0 d-flex align-items-center",
               styles.headingText
             )}
           >
             MARKDOWN
           </p>
           <textarea
-            className="form-control w-100 bg-dark text-light ps-3 pt-3"
+            className="form-control w-100 bg-dark text-light ps-4 pt-3"
             placeholder="Enter text"
             rows="100"
             onChange={handleChange}
@@ -59,7 +61,7 @@ const Markdown = () => {
         <div className="col-12 col-sm-6 p-0 bg-dark text-light">
           <p
             className={clsx(
-              "ps-3 m-0 d-flex align-items-center",
+              "ps-4 m-0 d-flex align-items-center",
               styles.headingText
             )}
           >

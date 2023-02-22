@@ -7,7 +7,7 @@
 const AddButton = ({ title, handleClick }) => {
   return (
     <div>
-      <button onClick={handleClick}>Add {title}</button>
+      <button onClick={handleClick} className="btn btn-secondary m-2">Add {title}</button>
     </div>
   );
 };
