@@ -60,11 +60,16 @@ export const markDownSyntax = [
   {
     id: 11,
     title: "code",
-    content: "'Your code here'",
+    content:
+      "```\n" +
+      "const test = () => {\n" +
+      "  // Your code here\n" +
+      "}\n" +
+      "```",
   },
   {
     id: 12,
-    title: "line break",
+    title: "linebreak",
     content: "---",
   },
   {
