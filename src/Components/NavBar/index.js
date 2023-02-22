@@ -1,4 +1,7 @@
+import { useState } from "react";
 import SaveChanges from "../SaveChanges";
+import { useCookies } from 'react-cookie';
+
 
 /**
  * NavBar component renders the nav bar including the hamburger menu, site name, trash button, and save changes.
@@ -7,11 +10,16 @@ import SaveChanges from "../SaveChanges";
  */
 const NavBar = () => {
 
+  const [cookies, setCookie] = useCookies(['trashClicked']);
+
   // Handles the click of the trash button and removes the markdown text from local storage.
   const handleTrashClick = () => {
+    setCookie('trashClicked', true);
     localStorage.removeItem("markDownText");
     window.location.reload();
   };
+console.log(cookies.trashClicked);
+
 
   return (
     <nav className="navbar navbar-dark bg-dark">
