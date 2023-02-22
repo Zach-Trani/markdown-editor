@@ -4,7 +4,7 @@
  * @param {*} { title, content, handleClick }
  * @return {*} 
  */
-const AddButton = ({ title, content, handleClick }) => {
+const AddButton = ({ title, handleClick }) => {
   return (
     <div>
       <button onClick={handleClick}>Add {title}</button>

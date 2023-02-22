@@ -2,7 +2,7 @@ import clsx from "clsx";
 import styles from "./save-changes.module.scss";
 
 /**
- * SaveChanges component is a button that is used to save the changes that a user makes to their markdown document.
+ * SaveChanges component is currently a non functioning button. Will download user input to a PDF in markdown syntax in future.
  *
  * @return {*}
  */
