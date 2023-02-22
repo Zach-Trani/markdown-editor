@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import clsx from "clsx";
 import styles from "./markdown.module.scss";
@@ -12,7 +12,12 @@ import NavBar from "../NavBar";
  * @return {*}
  */
 const Markdown = () => {
-  const [markDownText, setMarkDownText] = useState("");
+  const [markDownText, setMarkDownText] = useState(localStorage.getItem("markDownText") || "");
+
+
+  useEffect(() => {
+    localStorage.setItem('markDownText', markDownText);
+  }, [markDownText]);
 
   // Handles the change in the text area and updates the state.
   const handleChange = (event) => {
