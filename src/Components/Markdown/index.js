@@ -16,9 +16,11 @@ const Markdown = () => {
   const [markDownText, setMarkDownText] = useState(
     localStorage.getItem("markDownText") || ""
   );
+
+  // Sets the cookie to check if the page has been loaded before.
   const [cookies, setCookie] = useCookies(["pageLoad"]);
 
-  // Checks to see if the page has been loaded before. If it has, it will load the markdown text from local storage. 
+  // Checks to see if the page has been loaded before. If it has, it will load the markdown text from local storage.
   // If it has not, it will set the cookie and set the markdown text to the default text.
   useEffect(() => {
     if (cookies.pageLoad) {
@@ -31,6 +33,7 @@ const Markdown = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Sets the markdown text to local storage.
   useEffect(() => {
     localStorage.setItem("markDownText", markDownText);
   }, [markDownText]);
