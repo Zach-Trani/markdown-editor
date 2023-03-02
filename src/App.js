@@ -1,16 +1,18 @@
 import { Route, Routes } from "react-router-dom";
 import Markdown from "./Components/Markdown";
 import Home from "./Components/Home";
-import About from "./Components/About"
+import About from "./Components/About";
+import NavBar from "./Components/NavBar";
 
 function App() {
   return (
     <div className="App">
       <div>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/markdown" element={<Markdown />} />
-          <Route path='/about' element={<About />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </div>
