@@ -2,6 +2,7 @@ import HamburgerMenuIcon from "../BootstrapIcons/HamburgerMenuIcon";
 import TrashIcon from "../BootstrapIcons/TrashIcon";
 import SaveChanges from "../SaveChanges";
 
+
 /**
  * NavBar component renders the nav bar including the hamburger menu, site name, trash button, and save changes.
  *
