@@ -5,6 +5,7 @@ import styles from "./markdown.module.scss";
 import AddButton from "../AddButton";
 import { markDownSyntax } from "../../Data/markDownSyntax";
 import NavBar from "../NavBar";
+import { useCookies } from "react-cookie";
 
 /**
  * Markdown component renders the side by side editor and preview windows allowing users to enter input and have it display to the DOM.
@@ -12,11 +13,29 @@ import NavBar from "../NavBar";
  * @return {*}
  */
 const Markdown = () => {
-  const [markDownText, setMarkDownText] = useState(localStorage.getItem("markDownText") || "");
+  const [markDownText, setMarkDownText] = useState(
+    localStorage.getItem("markDownText") || ""
+  );
 
+  // Sets the cookie to check if the page has been loaded before.
+  const [cookies, setCookie] = useCookies(["pageLoad"]);
 
+  // Checks to see if the page has been loaded before. If it has, it will load the markdown text from local storage.
+  // If it has not, it will set the cookie and set the markdown text to the default text.
   useEffect(() => {
-    localStorage.setItem('markDownText', markDownText);
+    if (cookies.pageLoad) {
+      console.log("cookies exist");
+      return setMarkDownText(localStorage.getItem("markDownText"));
+    }
+    console.log("cookies do not exist");
+    setCookie("pageLoad", true);
+    setMarkDownText("# Welcome to my React Markdown Previewer!");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Sets the markdown text to local storage.
+  useEffect(() => {
+    localStorage.setItem("markDownText", markDownText);
   }, [markDownText]);
 
   // Handles the change in the text area and updates the state.
@@ -33,7 +52,7 @@ const Markdown = () => {
 
   return (
     <>
-    <NavBar/>
+      <NavBar />
       <div className="d-flex flex-wrap justify-content-lg-evenly bg-dark">
         {markDownSyntax.map((el) => {
           return (
