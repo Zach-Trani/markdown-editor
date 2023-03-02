@@ -24,10 +24,8 @@ const Markdown = () => {
   // If it has not, it will set the cookie and set the markdown text to the default text.
   useEffect(() => {
     if (cookies.pageLoad) {
-      console.log("cookies exist");
       return setMarkDownText(localStorage.getItem("markDownText"));
     }
-    console.log("cookies do not exist");
     setCookie("pageLoad", true);
     setMarkDownText("# Welcome to my React Markdown Previewer!");
     // eslint-disable-next-line react-hooks/exhaustive-deps
