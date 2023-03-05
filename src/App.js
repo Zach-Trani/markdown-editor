@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <div>
-        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/markdown" element={<Markdown />} />

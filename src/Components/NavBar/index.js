@@ -8,7 +8,7 @@ import SaveChanges from "../SaveChanges";
  *
  * @return {*}
  */
-const NavBar = () => {
+const NavBar = ({ showIcon }) => {
   // Handles the click of the trash button and removes the markdown text from local storage.
   const handleTrashClick = () => {
     localStorage.removeItem("markDownText");
@@ -55,8 +55,8 @@ const NavBar = () => {
           <h5 className="text-white ms-3 m-0">MARKDOWN</h5>
         </div>
         <div className="d-flex align-items-center" onClick={handleTrashClick}>
-          <TrashIcon />
-          <SaveChanges />
+          {showIcon && <TrashIcon />}
+          {showIcon && <SaveChanges />}
         </div>
       </nav>
     </div>
