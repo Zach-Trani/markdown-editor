@@ -50,7 +50,7 @@ const Markdown = () => {
 
   return (
     <>
-      <NavBar />
+    <NavBar showIcon={true} />
       <div className="d-flex flex-wrap justify-content-lg-evenly bg-dark">
         {markDownSyntax.map((el) => {
           return (

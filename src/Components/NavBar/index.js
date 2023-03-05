@@ -1,15 +1,14 @@
+import { Link } from "react-router-dom";
 import HamburgerMenuIcon from "../BootstrapIcons/HamburgerMenuIcon";
 import TrashIcon from "../BootstrapIcons/TrashIcon";
 import SaveChanges from "../SaveChanges";
-
 
 /**
  * NavBar component renders the nav bar including the hamburger menu, site name, trash button, and save changes.
  *
  * @return {*}
  */
-const NavBar = () => {
-
+const NavBar = ({ showIcon }) => {
   // Handles the click of the trash button and removes the markdown text from local storage.
   const handleTrashClick = () => {
     localStorage.removeItem("markDownText");
@@ -17,16 +16,50 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="navbar navbar-dark bg-dark">
-      <div className="d-flex align-items-center ms-3">
-        <HamburgerMenuIcon />
-        <h5 className="text-white ms-3 m-0">MARKDOWN</h5>
+    <div class="pos-f-t">
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+          <ul>
+            <li>
+              <Link to="/" class="text-white h4">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" class="text-white h4">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/markdown" class="text-white h4">
+                Markdown
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="d-flex align-items-center" onClick={handleTrashClick}>
-        <TrashIcon />
-        <SaveChanges />
-      </div>
-    </nav>
+
+      <nav className="navbar navbar-dark bg-dark">
+        <div className="d-flex align-items-center ms-3">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <HamburgerMenuIcon />
+          </button>
+          <h5 className="text-white ms-3 m-0">MARKDOWN</h5>
+        </div>
+        <div className="d-flex align-items-center" onClick={handleTrashClick}>
+          {showIcon && <TrashIcon />}
+          {showIcon && <SaveChanges />}
+        </div>
+      </nav>
+    </div>
   );
 };
 
