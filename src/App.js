@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import Markdown from "./Components/Markdown";
 import Home from "./Components/Home";
 import About from "./Components/About";
-import NavBar from "./Components/NavBar";
 
 function App() {
   return (
