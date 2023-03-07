@@ -16,22 +16,22 @@ const NavBar = ({ showIcon }) => {
   };
 
   return (
-    <div class="pos-f-t">
-      <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
+    <div className="pos-f-t">
+      <div className="collapse" id="navbarToggleExternalContent">
+        <div className="bg-dark p-4">
           <ul>
             <li>
-              <Link to="/" class="text-white h4">
+              <Link to="/" className="text-white h4">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" class="text-white h4">
+              <Link to="/about" className="text-white h4">
                 About
               </Link>
             </li>
             <li>
-              <Link to="/markdown" class="text-white h4">
+              <Link to="/markdown" className="text-white h4">
                 Markdown
               </Link>
             </li>
@@ -42,7 +42,7 @@ const NavBar = ({ showIcon }) => {
       <nav className="navbar navbar-dark bg-dark">
         <div className="d-flex align-items-center ms-3">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarToggleExternalContent"
