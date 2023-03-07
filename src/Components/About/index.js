@@ -7,7 +7,7 @@ const About = () => {
     <>
       <NavBar showIcon={false} />
       <div>About Page Component</div>
-      <div>
+      <div className="row justify-content-evenly">
         {profilesData.map((profile) => {
           return (
             <ProfileCard

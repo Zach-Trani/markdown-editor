@@ -14,7 +14,7 @@ export const profilesData = [
     description: "Role Here",
     image: devAri,
     github: "https://github.com/ariannalillie",
-    linkedin: "linkedin link",
+    linkedin: "https://www.linkedin.com/in/arianna-johnson-92773859/",
     portfolio: "portfolio link",
   },
   {
@@ -24,7 +24,7 @@ export const profilesData = [
     description: "Role Here",
     image: devZach,
     github: "https://github.com/Zach-Trani",
-    linkedin: "linkedin link",
+    linkedin: "https://www.linkedin.com/in/zacharytrani/",
     portfolio: "portfolio link",
   },
 ];
