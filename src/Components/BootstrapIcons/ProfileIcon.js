@@ -1,3 +1,8 @@
+/**
+ * ProfileIcon component is the developers personal portfolio icon displayed on the About page under each developer.
+ *
+ * @return {*} 
+ */
 export const ProfileIcon = () => {
   return (
     <svg

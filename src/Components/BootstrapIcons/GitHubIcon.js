@@ -1,4 +1,9 @@
- export const GitHubIcon = () => {
+/**
+ * GitHubIcon component is the github icon displayed on the About page under each developer.
+ *
+ * @return {*} 
+ */
+export const GitHubIcon = () => {
   return (
     <svg
     xmlns="http://www.w3.org/2000/svg"

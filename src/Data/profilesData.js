@@ -2,7 +2,7 @@ import devAri from "../media/dev-ari.jpeg";
 import devZach from "../media/dev-zach.jpeg";
 
 /**
- * New profile data generated here by creating an object with profile data.
+ * New developer profile data generated here by creating an object with profile data.
  *
  * @return {*}
  */

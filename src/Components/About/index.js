@@ -2,6 +2,12 @@ import NavBar from "../NavBar";
 import ProfileCard from "../ProfileCard";
 import { profilesData } from "../../Data/profilesData";
 
+
+/**
+ * The About component is a page that displays information about the Markdown Project and developers that created it.
+ *
+ * @return {*} 
+ */
 const About = () => {
   return (
     <>

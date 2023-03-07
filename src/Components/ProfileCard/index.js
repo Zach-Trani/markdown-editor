@@ -2,6 +2,21 @@ import { GitHubIcon } from "../BootstrapIcons/GitHubIcon";
 import { LinkedinIcon } from "../BootstrapIcons/LinkedinIcon";
 import { ProfileIcon } from "../BootstrapIcons/ProfileIcon";
 
+
+/**
+ * ProfileCard is a component created using bootstrap card and shows information on the developers.
+ *
+ * @param {*} {
+ *   name,
+ *   heading,
+ *   description,
+ *   image,
+ *   github,
+ *   linkedin,
+ *   portfolio,
+ * }
+ * @return {*} 
+ */
 const ProfileCard = ({
   name,
   heading,

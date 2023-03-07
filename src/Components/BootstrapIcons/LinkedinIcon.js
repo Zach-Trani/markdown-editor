@@ -1,3 +1,8 @@
+/**
+ * LinkedinIcon component is the linkedin icon displayed on the About page under each developer.
+ *
+ * @return {*} 
+ */
 export const LinkedinIcon = () => {
   return (
     <svg
