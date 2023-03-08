@@ -1,6 +1,7 @@
 import { GitHubIcon } from "../BootstrapIcons/GitHubIcon";
 import { LinkedinIcon } from "../BootstrapIcons/LinkedinIcon";
 import { ProfileIcon } from "../BootstrapIcons/ProfileIcon";
+import styles from "./profile-card.module.scss";
 
 
 /**
@@ -34,13 +35,13 @@ const ProfileCard = ({
         <h5 className="card-title">{heading}</h5>
         <p className="card-text">{description}</p>
         <div className="d-flex justify-content-evenly">
-          <a href={github}>
+          <a href={github} className={styles.icon}>
             <GitHubIcon />
           </a>
-          <a href={linkedin}>
+          <a href={linkedin} className={styles.icon}>
             <LinkedinIcon />
           </a>
-          <a href={portfolio}>
+          <a href={portfolio} className={styles.icon}>
             <ProfileIcon />
           </a>
         </div>
