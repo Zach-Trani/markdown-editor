@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Markdown from "./Components/Markdown";
-import Home from "./Components/Home";
 import About from "./Components/About";
 
 function App() {
@@ -8,8 +7,7 @@ function App() {
     <div className="App">
       <div>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/markdown" element={<Markdown />} />
+          <Route path="/" element={<Markdown />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </div>

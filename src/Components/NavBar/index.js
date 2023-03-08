@@ -21,17 +21,12 @@ const NavBar = ({ showIcon }) => {
         <div className="bg-dark p-4">
           <ul>
             <li>
-              <Link to="/" className="text-white h4">
-                Home
-              </Link>
-            </li>
-            <li>
               <Link to="/about" className="text-white h4">
                 About
               </Link>
             </li>
             <li>
-              <Link to="/markdown" className="text-white h4">
+              <Link to="/" className="text-white h4">
                 Markdown
               </Link>
             </li>
