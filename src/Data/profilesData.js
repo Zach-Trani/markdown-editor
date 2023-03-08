@@ -21,7 +21,7 @@ export const profilesData = [
   {
     id: 1,
     name: "Zach Trani",
-    heading: "Developer",
+    heading: "Full Stack Developer",
     description:
       "Zach is a mechanical engineer who studied at UMass Amherst and has a passion for all things engineering. In his free time, he has been self-studying programming and has developed a love for React and all things Javascript. Zach has a strong foundation in mechanical engineering principles and has honed his analytical skills through his studies. He applies this analytical approach to his programming projects, taking a meticulous approach to debugging and optimization.",
     image: devZach,
