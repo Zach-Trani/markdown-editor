@@ -28,7 +28,7 @@ const ProfileCard = ({
   portfolio,
 }) => {
   return (
-    <div className="card p-4" style={{ width: "400px" }}>
+    <div className="card p-4 m-2" style={{ width: "400px" }}>
       <img className="card-img-top rounded-circle" src={image} alt="devloper picture"/>
       <div className="card-body d-flex flex-column justify-content-evenly">
         <h3 className="card-title">{name}</h3>
