@@ -1,6 +1,8 @@
 import NavBar from "../NavBar";
 import ProfileCard from "../ProfileCard";
 import { profilesData } from "../../Data/profilesData";
+import clsx from "clsx";
+import styles from './about.module.scss'
 
 
 /**
@@ -12,8 +14,7 @@ const About = () => {
   return (
     <>
       <NavBar showIcon={false} />
-      <div>About Page Component</div>
-      <div className="row justify-content-evenly">
+      <div className={clsx("row justify-content-evenly p-5 h-100 border-top border-light", styles.aboutPage)}>
         {profilesData.map((profile) => {
           return (
             <ProfileCard
