@@ -11,7 +11,7 @@ import SaveChanges from "../SaveChanges";
 const NavBar = ({ showIcon }) => {
   // Handles the click of the trash button and removes the markdown text from local storage.
   const handleTrashClick = () => {
-    localStorage.removeItem("markDownText");
+    localStorage.setItem("markDownText", "");
     window.location.reload();
   };
 
